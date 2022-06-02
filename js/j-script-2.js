@@ -2,37 +2,19 @@
 
 //Preloader
 
- /*document.addEventListener('DOMContentLoaded', ()=>{
-       const mediaFiles = document.querySelectorAll('video');
-
-       let i = 0
-       const Preloader = document.querySelector('.preloader');
-       const Percents = document.querySelector('.preloader_percent span');
-
-        i++
-       Percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed();
-
-       Array.from(mediaFiles).forEach((file,index) => {
-              file.onload = () => {
-                  if(i === mediaFiles.length) {
-                      Preloader.classList.add('hide')
-                      Percents.innerText = 100
-                  }
-              }
-       })
-
- })*/
+/*Preloader*/
+window.onload = function () {
+    let preloader = document.querySelector(".preloader__loader");
+    preloader.classList.add('hide');
+    setTimeout(function(){
+        preloader.classList.add('preloader__hiden')
+    }, 950)
+}
 
 
- /* const MenuLiA = document.querySelector('.menu-ul li');
-   MenuLiA.addEventListener("click", function (e) {
-       console.log('Съешь меня!');
-   })
 
-   const preloaderGo = document.querySelector('.preloader_loader');
-   preloaderGo.addEventListener("click", function (e) {
-       preloaderGo.classList.add('go');
-   })*/
+
+
 
 function ShowConsole (event) {
    console.log(event);
@@ -43,8 +25,8 @@ function ShowConsole (event) {
    //console.log(event.clientY);
 }
 
-/*
 
+/*
 UlHeaderNav.addEventListener("click", function (event) {
     if (event.target.closest('.li-header-nav')) ShowConsole ();
 })*/
